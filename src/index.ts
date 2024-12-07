@@ -24,8 +24,21 @@ interface IUser {
   isMarried: boolean,
 }
 
+interface INewUser extends IUser {
+  address: string
+}
+
+
 const user1: IUser = {
   username: "Ahmed",
   age: 25,
   isMarried: true
 }
+const user2: INewUser = {
+  username: "Ahmed",
+  age: 25,
+  isMarried: true,
+  address: "Omak"
+}
+console.log(user1)
+console.log(user2)
