@@ -45,31 +45,42 @@
 // console.log(user2)
 
 
-interface IUser {
-  username: string,
-  age: number,
-  address: string
+// interface IUser {
+//   username: string,
+//   age: number,
+//   address: string
+// }
+
+// type userKeys = keyof IUser;
+
+
+// const user: IUser = {
+//   username: "Ahmed",
+//   age: 18,
+//   address: "Roma, Italy"
+// }
+
+// function getProperty(obj: IUser, key: userKeys) {
+//   return obj[key];
+// }
+
+// console.log(getProperty(user, "age"))
+// console.log(getProperty(user, "username"))
+
+
+// function printLanguages(langarr: string[]) {
+//   return `First Langauge ${langarr[0]}, Second Lang is ${langarr[1]}`;
+// }
+
+// console.log(printLanguages(['PHP', 'JS', 'C#']));
+
+
+enum Direction {
+  Up,
+  Right,
+  Bottom,
+  Left
 }
+const playerDirection = Direction.Right;
 
-type userKeys = keyof IUser;
-
-
-const user: IUser = {
-  username: "Ahmed",
-  age: 18,
-  address: "Roma, Italy"
-}
-
-function getProperty(obj: IUser, key: userKeys) {
-  return obj[key];
-}
-
-console.log(getProperty(user, "age"))
-console.log(getProperty(user, "username"))
-
-
-function printLanguages(langarr: string[]) {
-  return `First Langauge ${langarr[0]}, Second Lang is ${langarr[1]}`;
-}
-
-console.log(printLanguages(['PHP', 'JS', 'C#']));
+console.log(playerDirection);
