@@ -75,12 +75,26 @@
 // console.log(printLanguages(['PHP', 'JS', 'C#']));
 
 
-enum Direction {
-  Up,
-  Right,
-  Bottom,
-  Left
-}
-const playerDirection = Direction.Right;
+// enum Direction {
+//   Up,
+//   Right,
+//   Bottom,
+//   Left
+// }
+// const playerDirection = Direction.Right;
 
-console.log(playerDirection);
+// console.log(playerDirection);
+
+function logArg<T>(arg: T) {
+  return arg;
+}
+
+console.log(logArg("Ahmed"));
+
+function swap<T>(arg1: T, arg2: T) {
+  return [arg2, arg1];
+}
+
+console.log(swap(10, 20))
+console.log(swap("Ahmed", "Muhammed"))
+console.log(swap("Ahmed", "tr"))
