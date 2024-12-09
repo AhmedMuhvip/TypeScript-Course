@@ -18,28 +18,58 @@
 // console.log(userProfile);
 
 
+// interface IUser {
+//   username: string,
+//   age: number,
+//   isMarried: boolean,
+// }
+
+// interface INewUser extends IUser {
+//   address: string,
+//   ImageUrl?: string,
+// }
+
+
+// const user1: IUser = {
+//   username: "Ahmed",
+//   age: 25,
+//   isMarried: true
+// }
+// const user2: INewUser = {
+//   username: "Ahmed",
+//   age: 25,
+//   isMarried: true,
+//   address: "Omak"
+// }
+// console.log(user1)
+// console.log(user2)
+
+
 interface IUser {
   username: string,
   age: number,
-  isMarried: boolean,
+  address: string
 }
 
-interface INewUser extends IUser {
-  address: string,
-  ImageUrl?: string,
-}
+type userKeys = keyof IUser;
 
 
-const user1: IUser = {
+const user: IUser = {
   username: "Ahmed",
-  age: 25,
-  isMarried: true
+  age: 18,
+  address: "Roma, Italy"
 }
-const user2: INewUser = {
-  username: "Ahmed",
-  age: 25,
-  isMarried: true,
-  address: "Omak"
+
+function getProperty(obj: IUser, key: userKeys) {
+  return obj[key];
 }
-console.log(user1)
-console.log(user2)
+
+console.log(getProperty(user, "age"))
+console.log(getProperty(user, "username"))
+
+
+function printLanguages(langarr: string[]) {
+  return `First Langauge ${langarr[0]}, Second Lang is ${langarr[1]}`;
+}
+
+console.log(printLanguages(['PHP', 'JS', 'C#']));
