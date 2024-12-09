@@ -25,7 +25,8 @@ interface IUser {
 }
 
 interface INewUser extends IUser {
-  address: string
+  address: string,
+  ImageUrl?: string,
 }
 
 
